@@ -1,6 +1,6 @@
-const url_employee = 'http://localhost:3737/api/employee';
-const url_shcedule = 'http://localhost:3737/api/schedule';
-const url_empSche = 'http://localhost:3737/api/employee/schedule';
+const url_employee = 'http://34.101.186.227:3737/api/employee';
+const url_shcedule = 'http://34.101.186.227:3737/api/schedule';
+const url_empSche = 'http://34.101.186.227:3737/api/employee/schedule';
 
 var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
@@ -172,7 +172,7 @@ async function deletePegawai(){
       'Content-Type': 'application/json',
     }
   }).then(res => res.json());
-  window.location.replace("http://localhost:3737/pegawai/pegawai.html");
+  window.location.replace("http://34.101.186.227:3737/pegawai/pegawai.html");
 }
 
 function addSchedule(){

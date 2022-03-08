@@ -1,4 +1,4 @@
-const url_schedule = 'http://localhost:3737/api/schedule';
+const url_schedule = 'http://34.101.186.227:3737/api/schedule';
 var output = "";
 
 getApiCtg()

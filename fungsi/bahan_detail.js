@@ -1,6 +1,6 @@
 var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
-const url_bahan = 'http://localhost:3737/api/bahan';
+const url_bahan = 'http://34.101.186.227:3737/api/bahan';
 var satuan = "";
 
 function openCity(evt, cityName) {
@@ -117,7 +117,7 @@ async function deleteBahan(){
     if(data.status=="True"){
       console.log("data sukses");
       // alert("sukses")
-      window.location.replace("http://localhost:3737/bahan/bahan_makanan.html");
+      window.location.replace("http://34.101.186.227:3737/bahan/bahan_makanan.html");
     }else{
       console.log("data error "+data.status);
       alert("Data Error");

@@ -1,6 +1,6 @@
 var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
-var url='http://localhost:3737/api/signin'
+var url='http://34.101.186.227:3737/api/signin'
 var role
 
 function postLogin() {
@@ -23,7 +23,7 @@ function postLogin() {
         localStorage.setItem("role", data.data[0]['role_code']);
         role = localStorage.getItem("role");
         // console.log("ini role ",role, "test")
-        window.location.replace("http://localhost:3737/index.html");
+        window.location.replace("http://34.101.186.227:3737/index.html");
         // location.reload();
       }else{
         alert("Login Gagal");

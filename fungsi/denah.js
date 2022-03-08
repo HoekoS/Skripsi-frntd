@@ -1,4 +1,4 @@
-const url = 'http://localhost:3737/api/order';
+const url = 'http://34.101.186.227:3737/api/order';
 let output=''
 var jmlh_meja = 30;
 var meja=0;
@@ -167,6 +167,6 @@ function validatePost(data = {}) {
 
 function pass2(ids){
   // ids=id
-  window.open("http://localhost:3737/api/order/qr/cetak?key="+ids,"_blank")
+  window.open("http://34.101.186.227:3737/api/order/qr/cetak?key="+ids,"_blank")
   // console.log(ids)
 }

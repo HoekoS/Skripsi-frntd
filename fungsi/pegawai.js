@@ -1,4 +1,4 @@
-const url_employee = 'http://localhost:3737/api/employee';
+const url_employee = 'http://34.101.186.227:3737/api/employee';
 var output = "";
 var date1="";
 var date2="";
