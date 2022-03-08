@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>GoToko | Dashboard</title>
 
   <link rel="stylesheet" href="pesanan.css">
   <!-- Google Font: Source Sans Pro -->
@@ -57,7 +57,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../index.html" class="brand-link">
-      <img src="http://localhost:3838/file-upload/SAKO_JADI.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="http://34.101.186.227:3838/file-upload/SAKO_JADI.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">GoToko</span>
     </a>
 
@@ -239,7 +239,7 @@
       }
 
       function showData(date1,date2){
-        $.getJSON("http://localhost:3737/api/history?date1="+date1+"&date2="+date2,
+        $.getJSON("http://34.101.186.227:3737/api/history?date1="+date1+"&date2="+date2,
           function(data) {
             if(data.data.length != 0){
               for (let j= 0; j < data.data.length ; j++) {
@@ -266,7 +266,7 @@
               $(".btnDtl").click(function(){
                   output2 = ""
                   console.log(this.id)
-                  $.getJSON("http://localhost:3737/api/history/detail?not="+this.id,
+                  $.getJSON("http://34.101.186.227:3737/api/history/detail?not="+this.id,
                     function(data) {
                       for (let j= 0; j < data.data.length ; j++) {
                         id = j+1
@@ -314,11 +314,11 @@
       cb(start, end);
 
       $("#button-print").click(function(){
-        window.open("http://localhost:3737/api/history/cetak?date1="+start_glbl+"&date2="+end_glbl,"_blank")
+        window.open("http://34.101.186.227:3737/api/history/cetak?date1="+start_glbl+"&date2="+end_glbl,"_blank")
       });
 
       $("#button-send").click(function(){
-        $.getJSON("http://localhost:3737/api/history/email?date1="+start_glbl+"&date2="+end_glbl,
+        $.getJSON("http://34.101.186.227:3737/api/history/email?date1="+start_glbl+"&date2="+end_glbl,
           function(data) {
             console.log(data.data)
           })
