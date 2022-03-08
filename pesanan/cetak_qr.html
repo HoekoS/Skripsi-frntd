@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="cetak_qr.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <!-- <link rel="stylesheet" href="../dist/css/adminlte.min.css"> -->
+</head>
+<body>
+  <div class="struk">
+    <div class="head-content">
+      <img id="img-sako" src="http://localhost:3838/file-upload/SAKO_JADI.png">
+      <div class="jdl">Cafe Sako</div>
+      <div class="almt">Jl. Cemara Raya No.836 Rt.06 Rw.09</div>
+    </div>
+    <div class="ml-10 mr-10 mt-20">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="border" style="overflow-x:auto;" >
+        <tr>
+          <td id="tanggal-now"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Nomor Nota</td>
+          <td class="right">
+            <div id="no-nota"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Nomor Meja</td>
+          <td class="right">
+            <div id="no-meja"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Nama Pelanggan</td>
+          <td class="right">
+            <div id="nama-plgn"></div>
+          </td>
+        </tr>
+      </table>
+      <hr class="mt-10"style="border-top: 2px dashed ;">
+      <div class="stts-Psn">
+        <div id="status-psn"> </div>
+      </div>
+      <hr style="border-top: 2px dashed ;">
+      <div class="center">
+          <img id="img-scan">
+      </div>
+      <hr style="border-top: 2px dashed ;">
+      <div>
+        <table border="0" width="100%" class="footer" >
+          <tr>
+            <td>
+              <i class="fab fa-instagram"></i>
+            </td>
+            <td>
+              Cafe Sako
+            </td>
+          </tr>
+        </table>
+      </div>
+      <hr style="border-top: 2px dashed ;">
+    </div>
+  </div>
+
+<script src="../fungsi/cetak_qr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+</body>
+</html>

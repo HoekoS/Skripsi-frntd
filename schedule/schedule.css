@@ -1,0 +1,44 @@
+.scroll{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 780px;
+  width: auto;
+  white-space:nowrap;
+  background-color: white;
+}
+
+.card-bod{
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-left: 30px;
+  height: 440px;
+  font-size: 18px;
+}
+
+.card-foot{
+  margin-top: 10px;
+  margin-left: 30px;
+  height: 65px;
+  font-size: 18px;
+}
+
+.card-block {
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 730px;
+  font-weight: bolder;
+}
+
+.nm-hari{
+  font-size: 27px;
+  margin-left: 120px;
+}
+
+.nmPl{
+  height: 280px;
+  font-size: 17px;
+}
+
+.clrRow{
+  color: seagreen;
+}

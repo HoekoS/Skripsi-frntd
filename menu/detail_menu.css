@@ -1,0 +1,12 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+#btn-sub{
+  margin-right: 10px;
+  float: right;
+}
+#btn-del{
+  margin-right: 20px;
+  float: right;
+}

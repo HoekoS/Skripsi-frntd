@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | DataTables</title>
+
+  <link rel="stylesheet" href="pesanan.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a onclick="logout()" class="nav-link" href="#" role="button">
+          <i class="fa fa-power-off"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="brand-link">
+      <img src="http://localhost:3838/file-upload/SAKO_JADI.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">GoToko</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul id="sidebar-script" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Pesanan</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="denah.html">Denah Restoran</a></li>
+              <li class="breadcrumb-item active">Pesanan</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row" style="height: 800px;">
+                  <div class="col-2" style="height: inherit;">
+                    <div class="card" style="height: inherit;">
+                      <div class="card-body"style="height: inherit;">
+                        <div class="tab">
+                          <button class="tablinks" onclick="openCity(event, 'Aneka Nasi')" id="defaultOpen">Aneka Nasi</button>
+                          <button class="tablinks" onclick="openCity(event, 'Aneka Mie')">Aneka Mie</button>
+                          <button class="tablinks" onclick="openCity(event, 'Aneka Masakan Ayam')">Aneka Masakan Ayam</button>
+                          <button class="tablinks" onclick="openCity(event, 'Aneka Masakan Telur')">Aneka Masakan Telur</button>
+                          <button class="tablinks" onclick="openCity(event, 'Menu Londo')">Menu Londo</button>
+                          <button class="tablinks" onclick="openCity(event, 'Aneka Sayur')">Aneka Sayur</button>
+                          <button class="tablinks" onclick="openCity(event, 'Seafood')">Seafood</button>
+                          <button class="tablinks" onclick="openCity(event, 'Aneka Soup')">Aneka Soup</button>
+                          <button class="tablinks" onclick="openCity(event, 'Minuman Dingin')">Minuman Dingin</button>
+                          <button class="tablinks" onclick="openCity(event, 'Minuman Panas')">Minuman Panas</button>
+                          <button class="tablinks" onclick="openCity(event, 'Aneka Jus')">Aneka Jus</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6"style="height: inherit;">
+                    <div id="Aneka Nasi" class="tabcontent" style="height: inherit;">
+                      <div id="Aneka NasiRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Aneka Mie" class="tabcontent" style="height: inherit;">
+                      <div id="Aneka MieRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Aneka Masakan Ayam" class="tabcontent" style="height: inherit;">
+                      <div id="Aneka Masakan AyamRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Aneka Masakan Telur" class="tabcontent" style="height: inherit;">
+                      <div id="Aneka Masakan TelurRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Menu Londo" class="tabcontent" style="height: inherit;">
+                      <div id="Menu LondoRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Seafood" class="tabcontent" style="height: inherit;">
+                      <div id="SeafoodRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Aneka Sayur" class="tabcontent" style="height: inherit;">
+                      <div id="Aneka SayurRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Aneka Soup" class="tabcontent" style="height: inherit;">
+                      <div id="Aneka SoupRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Minuman Dingin" class="tabcontent" style="height: inherit;">
+                      <div id="Minuman DinginRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Minuman Panas" class="tabcontent" style="height: inherit;">
+                      <div id="Minuman PanasRow" class="row mt-2"></div>
+                    </div>
+                    <div id="Aneka Jus" class="tabcontent" style="height: inherit;">
+                      <div id="Aneka JusRow" class="row mt-2"></div>
+                    </div>
+
+
+                  </div>
+                  <div class="col-4" style="height: inherit;">
+                    <div class="card infoMenu">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-auto nota">
+                            Nomer<br>Meja
+                          </div>
+                          <div id="no-meja" class="col-md-auto mt-2 ml-auto dtlMenu"></div>
+                          <div class="col-4"></div>
+                          <div class="col-md-auto nota">
+                            Nomer<br>Nota
+                          </div>
+                          <div id="no-nota" class="col-md-auto mt-2 ml-auto dtlMenu"></div>
+                        </div>
+                        <hr>
+                        <div class="row nmPl">
+                          <div class="col-md-auto">
+                            Nama Pelanggan :
+                          </div>
+                          <div id="nm-Pelanggan" class="col"></div>
+                          <div id="status" class="col-md-auto"></div>
+                        </div>
+                        <div class="row mt-auto nmPl">
+                          <div class="col-md-auto">
+                            State :
+                          </div>
+                          <div id="stt-now" class="col-md-auto"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card dtl-pesn">
+                      <div id="pilihMenu" class="card-body nota">
+
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row infoMenu">
+                          <div class="col-md-auto total">
+                            Total
+                          </div>
+                          <div class="col-md-auto ml-auto total">
+                            <p id="ttl_hrga"></p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-auto">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#editState">Ganti State</button>
+                          </div>
+                          <div class="col-md-auto ml-auto">
+                            <button class="btn btn-primary btn-bayar" data-toggle="modal" data-target="#confirm-delete">Bayar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+
+  <div class="modal fade bd-example-modal-lg modalAdd" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="card-header">
+          <h3 class="card-title">Tambah Menu</h3>
+        </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Jumlah</label>
+              <input type="text" class="form-control" id="jmlh-pesn" placeholder="Masukan Jumlah Pesanan">
+              <label>Catatan</label>
+              <input type="text" class="form-control" id="cttn-pesn" placeholder="Masukan Catatan Pesanan">
+            </div>
+          </div>
+          <!-- /.card-body -->
+
+          <div class="card-footer">
+            <button onclick="postPesanan()" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalEdit" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="card-header">
+          <h3 class="card-title">Edit Menu</h3>
+        </div>
+          <div class="card-body">
+            <div class="form-group">
+              <input type="hidden" class="form-control" id="id-pesn" placeholder="Masukan Jumlah Pesanan">
+              <label>Jumlah</label>
+              <input type="text" class="form-control" id="edit-jmlh-pesn" placeholder="Masukan Jumlah Pesanan">
+              <label>Catatan</label>
+              <input type="text" class="form-control" id="edit-cttn-pesn" placeholder="Masukan Catatan Pesanan">
+            </div>
+          </div>
+          <!-- /.card-body -->
+
+          <div class="card-footer">
+            <button onclick="editPesanan()" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="editState" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="card-header">
+          <h3 class="card-title">Edit State</h3>
+        </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>State</label>
+              <select id="edit-state" class="form-control" aria-label="Default select example">
+                <!-- <option value="MENUNGGU VERIFIKASI">MENUNGGU VERIFIKASI</option> -->
+                <option value="BATAL PESAN">BATAL PESAN</option>
+                <option value="PESANAN DISUBMIT">PESANAN DISUBMIT</option>
+                <option value="VERIFIKASI STAFF KASIR">VERIFIKASI STAFF KASIR</option>
+                <!-- <option value="SEDANG DIMASAK">SEDANG DIMASAK</option> -->
+                <!-- <option value="SELESAI DIMASAK">SELESAI DIMASAK</option> -->
+                <option value="BELUM DIBAYAR">BELUM DIBAYAR</option>
+              </select>
+            </div>
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            <button onclick="editState()" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Bayar
+            </div>
+            <div class="modal-body">
+                Apakah ingin mengahkiri proses pemesanan?
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="bayarState()" class="btn btn-primary" data-dismiss="modal">Ya</button>
+                <button class="btn btn-danger ">Tidak</button>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.1.0
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<script src="../fungsi/pesanan.js"></script>
+<script src="../fungsi/jwt.js"></script>
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<!-- <script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,"searching": false, "lengthChange": false, "autoWidth": false,
+      "buttons": ["colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  });
+</script> -->
+</body>
+</html>

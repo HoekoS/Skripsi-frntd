@@ -1,0 +1,18 @@
+.card-block {
+  height: 500px;
+}
+.card-block2 {
+  height: 600px;
+}
+.card-block3 {
+  height: 365px;
+}
+
+.font-style{
+  font-size: 20px;
+}
+
+.scroll{
+  overflow-y: auto;
+  height: 365px;
+}

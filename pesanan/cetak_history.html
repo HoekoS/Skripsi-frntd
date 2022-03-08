@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="cetak_history.css">
+  </head>
+  <body>
+    <div>
+      <div class="head-content">
+        <div class="row">
+          <div class="col-2">
+            <img id="img-sako" src="http://localhost:3838/file-upload/SAKO_JADI.png">
+          </div>
+          <div class="col-5">
+            <div class="jdl">Cafe Sako</div>
+            <div class="almt">Jl. Cemara Raya No.836 Rt.06 Rw.09</div>
+          </div>
+          <div class="col-4" style="margin-top: 28px;">
+            <div>Tanggal</div>
+            <div id="jarak"></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 15px; margin-left: 15px; margin-right: 15px;">
+        <table border="2" cellpadding="0" cellspacing="0" width="100%" class="border" style="overflow-x:auto;" >
+          <thead>
+            <tr style="font-size: 20px;">
+              <th>Id</th>
+              <th>No Nota</th>
+              <th colspan="2">Nama Pelanggan</th>
+              <th colspan="3">Take Away / Dine In</th>
+              <th>Total Harga</th>
+              <th>Tanggal Pembelian</th>
+            </tr>
+          </thead>
+          <tbody id="data-psn">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="../fungsi/cetak_history.js"></script>
+  </body>
+</html>

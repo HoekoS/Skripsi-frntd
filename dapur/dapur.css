@@ -1,0 +1,70 @@
+.scroll{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 780px;
+  width: auto;
+  white-space:nowrap;
+  background-color: white;
+}
+
+.card-bod{
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-left: 30px;
+  height: 440px;
+  font-size: 18px;
+}
+
+.card-foot{
+  margin-top: 10px;
+  margin-left: 30px;
+  height: 65px;
+  font-size: 18px;
+}
+
+.card-block {
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 200px;
+  font-weight: bolder;
+}
+.nota{
+  font-size: 19px;
+}
+
+.dtlMenu{
+  color: cadetblue;
+  font-size: 25px;
+}
+
+.nmPl{
+  font-size: 20px;
+}
+div.nmPl div.col{
+  color: cadetblue;
+}
+div.nmPl div#status{
+  color: red;
+}
+#stt-now{
+  color: cadetblue;
+  font-size: 20px;
+}
+.nmPsn{
+  /* font-weight: bolder; */
+  font-size: 19px;
+}
+.namaPsn{
+  /* font-weight: bolder; */
+  font-size: 19px;
+}
+.jmlh{
+  font-size: 25px;
+  /* font-weight: bolder; */
+  /* color: cadetblue; */
+}
+.dtl-menu{
+  /* color: cadetblue; */
+  font-size: 18px;
+  /* font-weight: bolder; */
+}

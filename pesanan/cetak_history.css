@@ -1,0 +1,21 @@
+
+@page {
+  size: A4 landscape;
+  margin: 10px 10px 10px 10px ;
+}
+
+
+@page:first {
+  size: A4 landscape;
+  margin: 10px 10px 10px 10px ;
+}
+
+#img-sako{
+  width: 35%;
+}
+
+.jdl{
+  font-size: 25px;
+  font-weight: bolder;
+}
+

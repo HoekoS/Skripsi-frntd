@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="cetak_qr.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <div class="struk">
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row head-content">
+            <div class="col-12">
+              <img id="img-sako" src="http://localhost:3838/file-upload/SAKO_JADI.png">
+            </div>
+            <div class="col-12 jdl">Cafe Sako</div>
+            <div class="col">Jl. Cemara Raya No.836 Rt.06 Rw.09</div>
+          </div>
+          <!-- <hr style="border-top: 2px solid;"> -->
+          <div class="row ml-2 mr-2 mt-4">
+            <div class="col-12">7 Feb 2022</div>
+            <div class="col-6">Nomer Nota</div>
+            <div class="col-6 right">CS568</div>
+            <div class="col-6">Nomer Meja</div>
+            <div class="col-6 right">7</div>
+            <div class="col-6">Nama Pelanggan</div>
+            <div class="col-6 right">Hoeko</div>
+          </div>
+          <hr style="border-top: 2px dashed ;">
+          <div class="stts-Psn">
+            <h1>Take Away</h1>
+          </div>
+          <hr style="border-top: 2px dashed ;">
+          <div>
+            <div class="row mt-1">
+              <div class="col-1 mt-2">`+id+`</div>
+                <div class="col-md-auto mt-2">`+nama+`</div>
+              </div>
+              <div class="row">
+                <div class="col-md-auto ml-auto">`+quantity+`</div>
+                <div class="col-md-auto ml-auto">x</div>
+                <div class="col-md-auto ml-auto">`+price+`</div>
+                <div class="col-md-auto ml-auto">`+total+`</div>
+              </div>
+              <div class="row">
+                <div class="col-md-auto ml-auto">Catatan : </div>
+                <div class="col-md-auto ml-auto">`+catatan+`</div>
+              </div>
+            </div>
+          </div>
+          <hr style="border-top: 2px dashed ;">
+          <div class="row ml-2 mr-2">
+            <div class="">
+              Subtotal
+            </div>
+            <div class="ml-auto mr-2">
+              Rp. 120.000
+            </div>
+          </div>
+          <hr style="border-top: 2px dashed ;">
+          <div class="row ml-2 mr-2">
+            <div class="">
+              Total
+            </div>
+            <div class="ml-auto mr-2">
+              Rp. 120.000
+            </div>
+          </div>
+          <hr style="border-top: 2px dashed ;">
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+<!-- ./wrapper -->
+
+<script src="../fungsi/cetak_qr.js"></script>
+</body>
+</html>
