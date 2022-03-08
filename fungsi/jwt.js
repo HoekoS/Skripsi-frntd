@@ -213,5 +213,5 @@ async function logout(){
 
   // Storing data in form of JSON
   var data = await response.json();
-  window.location.replace("http://localhost:3737/login/index.html");
+  window.location.replace("http://localhost:3737/login/login.html");
 }
