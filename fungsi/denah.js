@@ -12,7 +12,7 @@ async function getapi(urls) {
   var data = await response.json();
   console.log(data.data)
   // namaPlngn=data.data[1]['nama_pelanggan']
-  if (data.data.length != null){
+  if (data.data != null){
     jmlh_meja_kosong = jmlh_meja - data.data.length
   }else{
     jmlh_meja_kosong = jmlh_meja - 0
@@ -37,12 +37,12 @@ async function getapi(urls) {
     meja=x;
     document.getElementById('denah-row').innerHTML=output;
   }
-  if(jmlh_meja_kosong==30){
-    for(let i=0;i<jmlh_meja_kosong;i++){
-      var output2 = ``
-      output = show('','','',x,output2)
-    }
-  }
+  // if(jmlh_meja_kosong==30){
+  //   for(let i=0;i<jmlh_meja_kosong;i++){
+  //     var output2 = ``
+  //     output = show('','','',x,output2)
+  //   }
+  // }
   // console.log(output)
 }
 getapi(url);
