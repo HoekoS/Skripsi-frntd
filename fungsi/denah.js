@@ -14,11 +14,13 @@ async function getapi(urls) {
   // namaPlngn=data.data[1]['nama_pelanggan']
   if (data.data != null){
     jmlh_meja_kosong = jmlh_meja - data.data.length
+    jmlh_pelanggan = data.data.length
   }else{
     jmlh_meja_kosong = jmlh_meja - 0
+    jmlh_pelanggan = 0
   }
   console.log(jmlh_meja_kosong)
-  document.getElementById('jml_pelanggan').innerHTML='<label  style="margin-right: 50px;">Jumlah Pelanggan Saat Ini : '+data.data.length+'</label>'
+  document.getElementById('jml_pelanggan').innerHTML='<label  style="margin-right: 50px;">Jumlah Pelanggan Saat Ini : '+jmlh_pelanggan+'</label>'
   for (let j= 0; j < jmlh_meja; j++) {
     let x= j+1
     if(x<=data.data.length){
