@@ -30,7 +30,7 @@ async function getapi(urls) {
         output2 = `style="background-color: pink;"`
       }
 
-      output = showCetak(id,data.data[j]['no_nota'],data.data[j]['nama_pelanggan'],x,output2)
+      output = showCetak(String(data.data[j]['id']),data.data[j]['no_nota'],data.data[j]['nama_pelanggan'],x,output2)
     }
     else{
       var output2 = ``
