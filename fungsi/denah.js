@@ -23,7 +23,7 @@ async function getapi(urls) {
   document.getElementById('jml_pelanggan').innerHTML='<label  style="margin-right: 50px;">Jumlah Pelanggan Saat Ini : '+jmlh_pelanggan+'</label>'
   for (let j= 0; j < jmlh_meja; j++) {
     let x= j+1
-    if(x<=data.data.length){
+    if(x<=jmlh_pelanggan){
       var id = String(data.data[j]['id'])
       var output2 = ``
       if(data.data[j]['State']=="PESANAN DISUBMIT"){
