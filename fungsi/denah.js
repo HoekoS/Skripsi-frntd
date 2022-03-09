@@ -12,10 +12,10 @@ async function getapi(urls) {
   var data = await response.json();
   console.log(data.data)
   // namaPlngn=data.data[1]['nama_pelanggan']
-  if (data.data.length = null){
-    jmlh_meja_kosong = jmlh_meja - 0
-  }else{
+  if (data.data.length != null){
     jmlh_meja_kosong = jmlh_meja - data.data.length
+  }else{
+    jmlh_meja_kosong = jmlh_meja - 0
   }
   console.log(jmlh_meja_kosong)
   document.getElementById('jml_pelanggan').innerHTML='<label  style="margin-right: 50px;">Jumlah Pelanggan Saat Ini : '+data.data.length+'</label>'
