@@ -213,5 +213,5 @@ async function logout(){
 
   // Storing data in form of JSON
   var data = await response.json();
-  window.location.replace("http://34.101.186.227:3737/login/login.html");
+  window.location.replace("http://34.101.186.227:3737");
 }
