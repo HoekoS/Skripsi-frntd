@@ -33,6 +33,12 @@ async function getapi(urls) {
     meja=x;
     document.getElementById('denah-row').innerHTML=output;
   }
+  if(jmlh_meja_kosong==30){
+    for(let i=0;i<jmlh_meja_kosong;i++){
+      var output2 = ``
+      output = show('','','',x,output2)
+    }
+  }
   // console.log(output)
 }
 getapi(url);
