@@ -1,4 +1,4 @@
-const url = 'http://34.101.186.227:3737/api/order';
+const url = 'http://adm.cafesako.store/api/order';
 let output=''
 var jmlh_meja = 30;
 var meja=0;
@@ -25,6 +25,7 @@ async function getapi(urls) {
     let x= j+1
     if(x<=jmlh_pelanggan){
       var id = String(data.data[j]['id'])
+      // console.log(String(data.data[j]['id']))
       var output2 = ``
       if(data.data[j]['State']=="PESANAN DISUBMIT"){
         output2 = `style="background-color: pink;"`
@@ -51,7 +52,7 @@ getapi(url);
 
 
 function showCetak(id,data1,data2,x,output2){
-  // console.log(output2)
+  // console.log(id)
     output +=
             `<div class="col-2 col_mr">
               <div class="card cardDenah" `+output2+`>
@@ -179,6 +180,6 @@ function validatePost(data = {}) {
 
 function pass2(ids){
   // ids=id
-  window.open("http://34.101.186.227:3737/api/order/qr/cetak?key="+ids,"_blank")
+  window.open("http://adm.cafesako.store/api/order/qr/cetak?key="+ids,"_blank")
   // console.log(ids)
 }

@@ -1,7 +1,7 @@
 var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
-const url_user = 'http://34.101.186.227:3737/api/user';
-const url_employee = 'http://34.101.186.227:3737/api/employee';
+const url_user = 'http://adm.cafesako.store/api/user';
+const url_employee = 'http://adm.cafesako.store/api/employee';
 var output2
 
 getapi(url_user);

@@ -29,7 +29,7 @@
 // let ca = document.cookie;
 // alert(ca)
 // console.log(ca)
-const url_signout = 'http://34.101.186.227:3737/api/signout';
+const url_signout = 'http://adm.cafesako.store/api/signout';
 var path = window.location.pathname
 console.log(path)
 var role = localStorage.getItem("role");
@@ -213,5 +213,5 @@ async function logout(){
 
   // Storing data in form of JSON
   var data = await response.json();
-  window.location.replace("http://34.101.186.227:3737");
+  window.location.replace("http://adm.cafesako.store");
 }

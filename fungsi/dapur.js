@@ -2,7 +2,7 @@
 // var id=x.get('key');
 // var no_nota;
 // console.log(id);
-const url_pesanan = 'http://34.101.186.227:3737/api/order';
+const url_pesanan = 'http://adm.cafesako.store/api/order';
 var output = '';
 
 getapi(url_pesanan);

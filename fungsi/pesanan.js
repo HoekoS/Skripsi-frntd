@@ -2,8 +2,8 @@ var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
 var no_nota;
 console.log(id);
-const url_pesanan = 'http://34.101.186.227:3737/api/order';
-const url_kategori = 'http://34.101.186.227:3737/api/menu/kategori';
+const url_pesanan = 'http://adm.cafesako.store/api/order';
+const url_kategori = 'http://adm.cafesako.store/api/menu/kategori';
 const url_pilih = ''
 // let output2='';
 var stateValue;
@@ -78,7 +78,7 @@ function show(nama,pic,idMn){
           <div class="card imgMenu">
             <div class="card-body">
               <a href="#modalAdd" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="modalShow('`+idMn+`')">
-                <img id="imgs" src=http://34.101.186.227:3838/`+pic+`>
+                <img id="imgs" src=http://file.cafesako.store/`+pic+`>
               </a>
               <div class="row mt-2">
                 <div class="col-md-auto ml-auto mr-auto">
@@ -327,7 +327,7 @@ function bayarState(){
     if(data.status=="True"){
       console.log("data sukses");
       // alert("sukses")
-      window.location.replace("http://34.101.186.227:3737/pesanan/denah.html");
+      window.location.replace("http://adm.cafesako.store/pesanan/denah.html");
     }else{
       console.log("data error "+data.status);
       alert("Data Error");

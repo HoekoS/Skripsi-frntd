@@ -1,4 +1,4 @@
-const url_pesanan = 'http://34.101.186.227:3737/api/order';
+const url_pesanan = 'http://adm.cafesako.store/api/order';
 var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
 console.log(id);
@@ -31,5 +31,5 @@ async function getapi(urls) {
   document.getElementById('no-meja').innerHTML=data.data[0].no_meja;
   document.getElementById('nama-plgn').innerHTML=data.data[0].nama_pelanggan;
   document.getElementById('status-psn').innerHTML=stts;
-  document.getElementById('img-scan').src="http://34.101.186.227:3838/"+data.data[0].Url;
+  document.getElementById('img-scan').src="http://file.cafesako.store/"+data.data[0].Url;
 }

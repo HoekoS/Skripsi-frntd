@@ -1,4 +1,4 @@
-const url_bahan = 'http://34.101.186.227:3737/api/bahan';
+const url_bahan = 'http://adm.cafesako.store/api/bahan';
 
 getapi(url_bahan);
 

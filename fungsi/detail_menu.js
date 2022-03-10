@@ -1,7 +1,7 @@
 var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
 console.log(id);
-const url = 'http://34.101.186.227:3737/api/menu';
+const url = 'http://adm.cafesako.store/api/menu';
 var text="";
 
 fetch(url+'?key='+id)
@@ -16,7 +16,7 @@ fetch(url+'?key='+id)
           document.getElementById('editPrice').value=data.data[0].price;
           document.getElementById('editKategori').value=data.data[0].kategori;
           document.getElementById('editSubkategori').value=data.data[0].sub_kategori;
-          document.getElementById('editImage').src='http://34.101.186.227:3838/'+data.data[0].pic;
+          document.getElementById('editImage').src='http://file.cafesako.store/'+data.data[0].pic;
         }
       )
     }
@@ -35,7 +35,7 @@ function deleteMenu(){
     }
   }).then(res => res.json());
   // alert("error")
-  window.location.replace("http://34.101.186.227:3737/menu/menu.html");
+  window.location.replace("http://adm.cafesako.store/menu/menu.html");
 }
 
 document.getElementById("editMenu").addEventListener(
@@ -77,7 +77,7 @@ function putform() {
       .then(data => {
         if(data.status=="True"){
           alert("SUKSES");
-          window.location.replace("http://34.101.186.227:3737/menu/menu.html");
+          window.location.replace("http://adm.cafesako.store/menu/menu.html");
         }else{
           console.log(data.data)
           alert("Data Error");

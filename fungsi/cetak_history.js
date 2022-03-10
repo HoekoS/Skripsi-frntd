@@ -1,4 +1,4 @@
-const url_pesanan = 'http://34.101.186.227:3737/api/order';
+const url_pesanan = 'http://adm.cafesako.store/api/order';
 var x = new URLSearchParams(window.location.search);
 var id=x.get('key');
 console.log(id);
@@ -6,8 +6,8 @@ var output = "";
 var output2 = "";
 var date1='23-01-2022'
 var date2='21-02-2022'
-const url_history = 'http://34.101.186.227:3737/api/history?date1='+date1+"&date2="+date2;
-const url_detail = 'http://34.101.186.227:3737/api/history/detail';
+const url_history = 'http://adm.cafesako.store/api/history?date1='+date1+"&date2="+date2;
+const url_detail = 'http://adm.cafesako.store/api/history/detail';
 
 getapi(url_pesanan);
 

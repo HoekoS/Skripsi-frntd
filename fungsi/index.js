@@ -1,4 +1,4 @@
-const url_dash = 'http://34.101.186.227:3737/api/dashboard';
+const url_dash = 'http://adm.cafesako.store/api/dashboard';
 var output = "";
 var output2 = "";
 var output3 = "";
@@ -32,7 +32,7 @@ function show(id,name,date){
   // console.log(id_usr)
   output +=
         `<li class="item">
-        <a href="http://34.101.186.227:3737/bahan/bahan_detail.html?key=`+id+`" class="product-title">`+name+`
+        <a href="http://adm.cafesako.store/bahan/bahan_detail.html?key=`+id+`" class="product-title">`+name+`
         <span class="badge badge-danger float-right">Habis</span></a>
       <span class="product-description">
         Tanggal Pembelian Terahkir :`+date+`
@@ -107,7 +107,7 @@ function showMenu(nama,dsc,prc,pic){
   // console.log(id_usr)
   output3 +=
         `<li>
-        <img src="http://34.101.186.227:3838/`+pic+`" alt="User Image" style="height:100px">
+        <img src="http://file.cafesako.store/`+pic+`" alt="User Image" style="height:100px">
         <a class="users-list-name" style="font-weight:bold">`+nama+`</a>
         <span class="users-list-date">`+dsc+` - Rp. `+prc+`</span>
       </li>`;

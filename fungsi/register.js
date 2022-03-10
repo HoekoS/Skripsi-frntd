@@ -1,5 +1,5 @@
-const url_user = 'http://34.101.186.227:3737/api/user';
-const url_employee = 'http://34.101.186.227:3737/api/employee';
+const url_user = 'http://adm.cafesako.store/api/user';
+const url_employee = 'http://adm.cafesako.store/api/employee';
 var output = "";
 var output2 = "";
 
@@ -92,7 +92,7 @@ function postRegis() {
   }
 }
 function postData(data = {}) {
-  url='http://34.101.186.227:3737/api/signup'
+  url='http://adm.cafesako.store/api/signup'
 
   var response = fetch(url, {
     method:'POST',
@@ -145,5 +145,5 @@ async function deleteUsr(id){
       'Content-Type': 'application/json',
     }
   }).then(res => res.json());
-  window.location.replace("http://34.101.186.227:3737/login/register.html");
+  window.location.replace("http://adm.cafesako.store/login/register.html");
 }

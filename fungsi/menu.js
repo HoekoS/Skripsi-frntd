@@ -1,4 +1,4 @@
-const url = 'http://34.101.186.227:3737/api/menu';
+const url = 'http://adm.cafesako.store/api/menu';
 let output = '';
 var text="";
 
