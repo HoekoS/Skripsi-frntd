@@ -21,38 +21,44 @@ async function getapi(urls) {
   }
   console.log(jmlh_meja_kosong)
   document.getElementById('jml_pelanggan').innerHTML='<label  style="margin-right: 50px;">Jumlah Pelanggan Saat Ini : '+jmlh_pelanggan+'</label>'
-  for (let j= 0; j < jmlh_meja; j++) {
-    let x= j+1
-    if(x<=jmlh_pelanggan){
-      var id = String(data.data[j]['id'])
-      // console.log(String(data.data[j]['id']))
+  var no_meja=[];
+  var no_nota=[];
+  var nama_pelanggan=[];
+  var state=[];
+  var id=[];
+  for(let i=1;i<=data.data.length;i++){
+    no_meja[data.data[i-1]['no_meja']] = data.data[i-1]['no_meja']
+    no_nota[data.data[i-1]['no_meja']] = data.data[i-1]['no_nota']
+    nama_pelanggan[data.data[i-1]['no_meja']] = data.data[i-1]['nama_pelanggan']
+    id[data.data[i-1]['no_meja']] = data.data[i-1]['id']
+    state[data.data[i-1]['no_meja']] = data.data[i-1]['State']
+    // console.log(no_meja[i])
+  }
+  for (let j= 1; j <= jmlh_meja; j++) {
+
+    if(j==no_meja[j]){
+      // var id = String(data.data[j]['id'])
+      // console.log('MASUK J=NOMEJA',j)
       var output2 = ``
-      if(data.data[j]['State']=="PESANAN DISUBMIT"){
+      if(state[j]=="PESANAN DISUBMIT"){
         output2 = `style="background-color: pink;"`
       }
 
-      output = showCetak(String(data.data[j]['id']),data.data[j]['no_nota'],data.data[j]['nama_pelanggan'],x,output2)
-    }
-    else{
+      output = showCetak(String(id[j]),no_nota[j],nama_pelanggan[j],j,output2)
+    }else{
+      // console.log('MASUK ELSE',J)
       var output2 = ``
-      output = show('','','',x,output2)
+      output = show('','','',j,output2)
     }
-    meja=x;
+    meja=j;
     document.getElementById('denah-row').innerHTML=output;
   }
-  // if(jmlh_meja_kosong==30){
-  //   for(let i=0;i<jmlh_meja_kosong;i++){
-  //     var output2 = ``
-  //     output = show('','','',x,output2)
-  //   }
-  // }
-  // console.log(output)
 }
 getapi(url);
 
 
 function showCetak(id,data1,data2,x,output2){
-  // console.log(id)
+  // console.log(data1)
     output +=
             `<div class="col-2 col_mr">
               <div class="card cardDenah" `+output2+`>
@@ -180,6 +186,6 @@ function validatePost(data = {}) {
 
 function pass2(ids){
   // ids=id
-  window.open("http://adm.cafesako.store/api/order/qr/cetak?key="+ids,"_blank")
+  window.open("http://34.101.186.227:3737/api/order/qr/cetak?key="+ids,"_blank")
   // console.log(ids)
 }
